@@ -1,0 +1,85 @@
+#sipClient {
+  background-color: #333;
+  font-size: 13px;
+  line-height: 1.42857143;
+  /* firefox 19+ */
+  /* ie */
+}
+#sipClient p {
+  margin: 0;
+  padding: 0 0 10px 0;
+  line-height: 18px;
+}
+#sipClient .sipStatus {
+  margin: 0 -15px 15px -15px;
+  padding: 5px 15px;
+  background-color: #111;
+  color: #999;
+}
+#sipClient #txtCallStatus {
+  color: #fff;
+}
+#sipClient #sip-dialpad {
+  width: 292px;
+  padding: 16px 20px;
+}
+#sipClient #sip-dialpad .col-xs-4 {
+  text-align: center;
+}
+#sipClient .digit {
+  height: 66px;
+  width: 66px;
+  margin: 0 8px 14px !important;
+  background-color: #f8f8f8;
+  font-weight: 300;
+  font-size: 24px;
+  border-radius: 100px;
+  line-height: 21px;
+  padding-top: 9px;
+  float: left;
+}
+#sipClient .digit span {
+  display: block;
+  color: #999;
+  font-size: 10px;
+  font-weight: normal;
+}
+#sipClient .sip-panel h3 {
+  margin-top: 22px;
+}
+#sipClient #sip-splash {
+  height: 371px;
+}
+#sipClient #sip-splash .fa {
+  margin-bottom: 15px;
+}
+#sipClient #sip-splash .fa-circle {
+  color: #5cb85c;
+}
+#sipClient #sip-log .panel-heading {
+  padding: 10px 8px;
+}
+#sipClient #sip-logitems {
+  height: 332px;
+  overflow: auto;
+}
+#sipClient #sldVolume {
+  width: 140px;
+  margin: 0 auto;
+  box-shadow: none;
+}
+#sipClient .sip-logitem {
+  padding: 4px;
+}
+#sipClient #numDisplay::-webkit-input-placeholder {
+  color: #bbb;
+}
+#sipClient #numDisplay::-moz-placeholder {
+  color: #bbb;
+}
+#sipClient #numDisplay::-ms-input-placeholder {
+  color: #bbb;
+}
+#sipClient #numDisplay::-moz-placeholder {
+  color: #bbb;
+}

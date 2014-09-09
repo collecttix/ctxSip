@@ -1,0 +1,7 @@
+._*
+.DS_Store
+phone/scripts/config.js
+.codekit-cache/
+config.codekit
+*.sublime-project
+*.sublime-workspace
