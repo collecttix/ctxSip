@@ -10,38 +10,47 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <style>
             body {
                 margin-top       : 20px;
                 background-image : url('img/bg.jpg');
-            }
-            .navbar {
-                margin-bottom : 40px;
+                font-family: 'Open Sans', sans-serif;
             }
             .content {
-                margin-top       : 40px;
+                margin-top       : 50px;
                 padding-top      : 40px;
                 background-color : #fff;
                 box-shadow       : 0px -10px 20px rgba(0,0,0,0.03);
             }
-            .content img {
-                padding : 0 30px 10px 0;
+            .nav>li>a:hover, .nav>li>a:focus {
+                background-color: transparent;
+                color: #fff;
             }
+            .content img { padding : 0 30px 10px 0; }
+            .navbar { margin-bottom : 40px}
+            .nav, .nav a, .navbar a { color : #aaa; }
+            .navbar-toggle { border-color: #999;}
+            .icon-bar { background-color: #999; }
             .page-header {
-                border-bottom : 1px solid #aaa;
+                border-bottom : 1px solid #888;
                 margin-bottom : 40px;
+                color         : #fff;
+                padding-bottom: 40px;
             }
-            .content > .container > .row {
-                margin-bottom: 40px;
-            }
+            .page-header .fa { color : #5cb85c; margin-bottom: 10px;}
+            .page-header small { color : #888;}
+            .content > .container > .row { margin-bottom: 40px; }
+            .text-white { color : #fff;}
+            .navbar-brand { color : #fff;}
         </style>
     </head>
 
     <body>
 
-    <div class="container">
+    <div class="container" id="header">
 
-        <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -50,10 +59,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><i class="fa fa-fw fa-phone-square text-muted"></i> ctxPhone</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/" class="visible-xs"><i class="fa fa-phone-square"></i> Home</a></li>
                         <li><a href="https://github.com/Collecttix/ctxSip"><i class="fa fa-github"></i> GitHub Project</a></li>
                         <li><a href="https://collecttix.com"><i class="fa fa-asterisk text-success"></i> Collecttix</a></li>
                     </ul>
@@ -61,10 +70,10 @@
             </div>
         </div>
 
-        <h1 class="page-header text-center"><i class="fa fa-fw fa-phone-square text-success fa-2x"></i><br> ctxPhone <small><br>A simple, open source, javascript SIP phone for web applications.</small></h1>
+        <h1 class="page-header text-center"><i class="fa fa-fw fa-phone-square fa-2x"></i><br> ctxPhone <small><br>A simple, open source, javascript SIP phone for web applications.</small></h1>
 
         <div class="text-center">
-            <p class="text-center lead">Already have a sip account? Try our demo.</p>
+            <p class="lead text-white">Already have a sip account? Try our demo.</p>
             <a href="#mdlDemo" class="btn btn-lg btn-primary" id="btnDemo" data-toggle="modal"><i class="fa fa-fw fa-phone-square"></i> Try the Demo</a>
         </div>
     </div>
@@ -102,7 +111,7 @@
 
             <div class="well">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-sm-6">
                         <h3>Browser Support</h3>
                         <p>Standards based browsers will just work. No plugins-necessary.  Support requires: WebSockets &amp; WebRTC.</p>
                         <p>Supported Browsers</p>
@@ -112,7 +121,7 @@
                             <li><p>Apple Safari 8</p></li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-sm-6">
                         <h3>Use It</h3>
                         <p>Get started with ctxSip.</p>
                         <ul>
@@ -121,7 +130,8 @@
                             <li><p>Launch the phone.</p></li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="clearfix hidden-lg"></div>
+                    <div class="col-lg-3 col-sm-6">
                         <h3>Code</h3>
                         <ul>
                             <li><p><a href="http://sipjs.com/">SIP.js</a> Does all the heavy lifting.</p></li>
@@ -129,7 +139,7 @@
                             <li><p>When the client is launched, the user's configuration can be in a JS variable called <code>user</code> or it will look in localStorage for a JSON encoded object <code>SIPCreds</code></p></li>
                         </ul>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-sm-6">
                         <h3>Contribute</h3>
                         <ul>
                             <li><p>Have an idea or find a bug? <a href="https://github.com/collecttix/ctxSip/issues">Submit an Issue.</a></p></li>
