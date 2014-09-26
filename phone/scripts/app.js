@@ -605,6 +605,13 @@ $(document).ready(function() {
         ctxSip.newSession(s);
     });
 
+    // Auto-focus number input on backspace.
+    $('#sipClient').keydown(function(event) {
+        if (event.which === 8) {
+            $('#numDisplay').focus();
+        }
+    });
+
     $('#numDisplay').keypress(function(e) {
         // Enter pressed? so Dial.
         if (e.which === 13) {
