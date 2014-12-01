@@ -12,13 +12,13 @@ $(document).ready(function() {
     ctxSip = {
 
         config : {
-            password         : user.Pass,
-            display_name     : user.Display,
-            uri              : 'sip:'+user.User+'@'+user.Realm,
-            ws_servers       : user.WSServer,
-            register_expires : 30,
-            traceSip         : true,
-            log              : {
+            password        : user.Pass,
+            displayName     : user.Display,
+            uri             : 'sip:'+user.User+'@'+user.Realm,
+            wsServers       : user.WSServer,
+            registerExpires : 30,
+            traceSip        : true,
+            log             : {
                 level : 0,
             }
         },
@@ -603,6 +603,13 @@ $(document).ready(function() {
 
         s.direction = 'incoming';
         ctxSip.newSession(s);
+    });
+
+    // Auto-focus number input on backspace.
+    $('#sipClient').keydown(function(event) {
+        if (event.which === 8) {
+            $('#numDisplay').focus();
+        }
     });
 
     $('#numDisplay').keypress(function(e) {
