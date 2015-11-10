@@ -16,10 +16,12 @@ $(document).ready(function() {
             displayName     : user.Display,
             uri             : 'sip:'+user.User+'@'+user.Realm,
             wsServers       : user.WSServer,
+            // stunServers : [],
+            // usePreloadedRoute : true,
             registerExpires : 30,
             traceSip        : true,
             log             : {
-                level : 0,
+                level : 3,
             }
         },
         ringtone     : document.getElementById('ringtone'),
@@ -393,9 +395,9 @@ $(document).ready(function() {
                         stream      : ctxSip.Stream,
                         constraints : { audio : true, video : false },
                         render      : {
-                            remote : { audio: $('#audioRemote').get()[0] }
+                            remote : $('#audioRemote').get()[0]
                         },
-                        RTCConstraints : { "optional": [{ 'DtlsSrtpKeyAgreement': 'true'} ]}
+                        // RTCConstraints : { "optional": [{ 'DtlsSrtpKeyAgreement': 'true'} ]}
                     }
                 });
                 s.direction = 'outgoing';
@@ -459,7 +461,7 @@ $(document).ready(function() {
                         stream      : ctxSip.Stream,
                         constraints : { audio : true, video : false },
                         render      : {
-                            remote : { audio: $('#audioRemote').get()[0] }
+                            remote : document.getElementById('audioRemote')
                         },
                         RTCConstraints : { "optional": [{ 'DtlsSrtpKeyAgreement': 'true'} ]}
                     }

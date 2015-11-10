@@ -109,7 +109,6 @@
                         <ul>
                             <li><p>Google Chrome</p></li>
                             <li><p>Mozilla Firefox</li>
-                            <li><p>Apple Safari 8</p></li>
                         </ul>
                     </div>
                     <div class="col-md-3">
@@ -239,7 +238,7 @@
                 if (valid) {
                     localStorage.setItem('SIPCreds', JSON.stringify(user));
 
-                    var url      = '/phone',
+                    var url      = 'phone',
                         features = 'menubar=no,location=no,resizable=no,scrollbars=no,status=no,addressbar=no,width=320,height=480';
 
                     if (!localStorage.getItem('ctxPhone')) {
