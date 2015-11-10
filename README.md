@@ -1,6 +1,6 @@
 # ctxSip
 
-[Project Homepage / Demo](http://collecttix.github.io/ctxSip/)
+[Project Homepage / Demo](https://collecttix.github.io/ctxSip/)
 
 A Javascript SIP client based on [SIP.js](http://sipjs.com/).
 
@@ -9,7 +9,7 @@ ctxSip is a Javascript based SIP client that uses WebRTC and WebSockets to conne
 ## Features
 
 - Audio only, Hold / Resume, Mute, multiple call support.
-- No plugins required, Works with WebSocket / WebRTC enabled browsers. (Firefox & Chrome, for now Safari 8 when it is released.)
+- No plugins required, Works with WebSocket / WebRTC enabled browsers. (Firefox & Chrome.)
 - Call log is saved to localStorage.
 - Intuitive interface makes it easy for users.
 - Easy to configure and integrate into your project.
@@ -24,7 +24,7 @@ ctxSip is a Javascript based SIP client that uses WebRTC and WebSockets to conne
 ## Getting Started
 
 You will need a sip account on a server that supports SIP over websockets.  This has been tested with
-Kamailio in front of Freeswitch.  
+Kamailio in front of Freeswitch.
 
 - Clone this project.
 - Copy `phone/scripts/config-sample.js` to `phone/scripts/config.js`
@@ -53,9 +53,6 @@ var url      = '/phone',
 
 SSL connections work best because they will allow the user to save the media preferences.
 
-## Versioning
-
-For transparency into our release cycle, ctxSip is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we try.
 
 ## Dependencies
 
