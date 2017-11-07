@@ -11342,7 +11342,7 @@ MediaHandler.prototype = Object.create(SIP.MediaHandler.prototype, {
       this.peerConnection.close();
     }
 
-    this.peerConnection = new SIP.WebRTC.RTCPeerConnection({'iceServers': servers}, RTCConstraints);
+    this.peerConnection = new SIP.WebRTC.RTCPeerConnection({'iceServers': servers, rtcpMuxPolicy: "negotiate"}, RTCConstraints);
 
     // Firefox (35.0.1) sometimes throws on calls to peerConnection.getRemoteStreams
     // even if peerConnection.onaddstream was just called. In order to make
