@@ -118,7 +118,7 @@
                         <ul>
                             <li><p>Google Chrome</p></li>
                             <li><p>Mozilla Firefox</li>
-                            <li><p>Apple Safari 8</p></li>
+                            <li><p>Apple Safari 11</p></li>
                         </ul>
                     </div>
                     <div class="col-lg-3 col-sm-6">
@@ -151,7 +151,7 @@
         </div>
 
         <div class="text-center text-muted clearfix">
-            <p> &copy; 2014 Collecttix</p>
+            <p> &copy; 2018 Collecttix</p>
         </div>
 
     </div>
@@ -249,7 +249,7 @@
                 if (valid) {
                     localStorage.setItem('SIPCreds', JSON.stringify(user));
 
-                    var url      = 'phone',
+                    var url      = 'https://' + window.location.host + '/' + window.location.pathname + '/phone',
                         features = 'menubar=no,location=no,resizable=no,scrollbars=no,status=no,addressbar=no,width=320,height=480';
 
                     if (!localStorage.getItem('ctxPhone')) {
