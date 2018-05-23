@@ -51,7 +51,7 @@ var url      = '/phone',
 </script>
 ```
 
-SSL connections work best because they will allow the user to save the media preferences.
+SSL connections for are required for this to work!
 
 
 ## Dependencies
