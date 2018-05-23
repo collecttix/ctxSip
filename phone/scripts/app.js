@@ -499,6 +499,7 @@ $(document).ready(function() {
 
                 if (closable) {
                     var b = '<button type="button" class="close" data-dismiss="modal">&times;</button>';
+                    $("#mdlError .modal-header").find('button').remove();
                     $("#mdlError .modal-header").prepend(b);
                     $("#mdlError .modal-title").html(title);
                     $("#mdlError").modal({ keyboard : true });
