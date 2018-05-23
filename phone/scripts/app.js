@@ -583,9 +583,7 @@ $(document).ready(function() {
         ctxSip.setStatus("Ready");
 
         // Get the userMedia and cache the stream
-        if (SIP.WebRTC.isSupported()) {
-            SIP.WebRTC.getUserMedia({ audio : true, video : false }, ctxSip.getUserMediaSuccess, ctxSip.getUserMediaFailure);
-        }
+        SIP.WebRTC.getUserMedia({ audio : true, video : false }, ctxSip.getUserMediaSuccess, ctxSip.getUserMediaFailure);
     });
 
     ctxSip.phone.on('registrationFailed', function(e) {
