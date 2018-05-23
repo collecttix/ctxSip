@@ -16,12 +16,10 @@ $(document).ready(function() {
             displayName     : user.Display,
             uri             : 'sip:'+user.User+'@'+user.Realm,
             wsServers       : user.WSServer,
-            // stunServers : [],
-            // usePreloadedRoute : true,
             registerExpires : 30,
             traceSip        : true,
             log             : {
-                level : 3,
+                level : 0,
             }
         },
         ringtone     : document.getElementById('ringtone'),
@@ -397,7 +395,7 @@ $(document).ready(function() {
                         render      : {
                             remote : $('#audioRemote').get()[0]
                         },
-                        // RTCConstraints : { "optional": [{ 'DtlsSrtpKeyAgreement': 'true'} ]}
+                        RTCConstraints : { "optional": [{ 'DtlsSrtpKeyAgreement': 'true'} ]}
                     }
                 });
                 s.direction = 'outgoing';
@@ -461,7 +459,7 @@ $(document).ready(function() {
                         stream      : ctxSip.Stream,
                         constraints : { audio : true, video : false },
                         render      : {
-                            remote : document.getElementById('audioRemote')
+                            remote : { audio: $('#audioRemote').get()[0] }
                         },
                         RTCConstraints : { "optional": [{ 'DtlsSrtpKeyAgreement': 'true'} ]}
                     }
@@ -585,7 +583,9 @@ $(document).ready(function() {
         ctxSip.setStatus("Ready");
 
         // Get the userMedia and cache the stream
-        SIP.WebRTC.getUserMedia({ audio : true, video : false }, ctxSip.getUserMediaSuccess, ctxSip.getUserMediaFailure);
+        if (SIP.WebRTC.isSupported()) {
+            SIP.WebRTC.getUserMedia({ audio : true, video : false }, ctxSip.getUserMediaSuccess, ctxSip.getUserMediaFailure);
+        }
     });
 
     ctxSip.phone.on('registrationFailed', function(e) {
