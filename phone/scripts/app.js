@@ -547,18 +547,14 @@ $(document).ready(function() {
 
     ctxSip.phone.on('connected', function(e) {
         ctxSip.setStatus("Connected");
+        
+        ctxSip.setError(false)
     });
 
     ctxSip.phone.on('disconnected', function(e) {
         ctxSip.setStatus("Disconnected");
-
-        // disable phone
+        
         ctxSip.setError(true, 'Websocket Disconnected.', 'An Error occurred connecting to the websocket.');
-
-        // remove existing sessions
-        $("#sessions > .session").each(function(i, session) {
-            ctxSip.removeSession(session, 500);
-        });
     });
 
     ctxSip.phone.on('registered', function(e) {
